@@ -14,11 +14,9 @@ class PigLatinizer
       word = word.slice(1..-1) + word.slice(0)
     end
     word + "ay"
-  end 
+  end
 
   def to_pig_latin(sentence)
     sentence.split.collect { |word| piglatinize(word) }.join(" ")
-  end 
-end 
-
-
+  end
+end
