@@ -1,7 +1,8 @@
 class PigLatinizer
-  attr_accessor :test
 
-  def piglatinizer(word)
+  attr_reader :text
+
+  def piglatinize(word)
     vowels = %w{a e i o u}
     consonants = %w{b c d f g h j k l m n p q r s t v w x y z}
     if vowels.include?(word[0].downcase)
@@ -15,6 +16,7 @@ class PigLatinizer
     end
     word + "ay"
   end
+
 
   def to_pig_latin(sentence)
     sentence.split.collect { |word| piglatinize(word) }.join(" ")
